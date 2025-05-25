@@ -21,8 +21,8 @@ jobs:
         with:
           name: build
           path: build
-      - name: Check uploaded artifacts
-        run: ls -la build # เช็คว่ามีไฟล์ใน build หรือไม่
+      - name: Check if build artifact exists
+        run: ls -la build # ตรวจสอบว่า artifact มีจริง
   deploy:
     name: Deploy
     needs: build
